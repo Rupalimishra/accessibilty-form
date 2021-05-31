@@ -1,0 +1,282 @@
+header{
+  padding: 5px 15px 5px 15px;
+  background-color: orange;
+}
+
+section, aside{
+  padding: 15px;
+  font-size: 1.3em;
+}
+
+footer{
+  padding: 15px;
+  background-color: black;
+  color: white;
+}
+
+h1{
+  font-size: 1.5em;
+}
+
+h2{
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+h3{
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.btn-secondary{
+  background-color: gray;
+  color: white;
+}
+
+.btn-secondary:hover{
+  background-color: darkslategray;
+  color: white;
+}
+
+.btn-secondary, .btn-primary{
+  margin-top: 15px;
+}
+
+img{
+  border-radius: 50%;
+}
+
+
+/*Dropdown style starts here*/
+
+button[aria-haspopup="true"] {
+position: relative;
+padding: 5px 10px;
+width: 100%;
+border-radius: 0;
+text-align: left;
+}
+
+button[aria-haspopup="true"]::after {
+position: absolute;
+right: 5px;
+top: 10px;
+width: 0;
+height: 0;
+border: 8px solid transparent;
+border-top-color: currentColor;
+border-bottom: 0;
+content: "";
+}
+
+button[aria-haspopup="true"][aria-expanded="true"]::after {
+position: absolute;
+right: 5px;
+top: 10px;
+width: 0;
+height: 0;
+border: 8px solid transparent;
+border-top: 0;
+border-bottom-color: currentColor;
+content: "";
+}
+
+button[aria-haspopup="true"] + [role="listbox"] {
+position: absolute;
+margin: 0;
+width: 85.5%;
+max-height: 10em;
+border-top: 0;
+overflow-y: auto;
+}
+
+[role="listbox"] {
+margin: 1em 0 0;
+padding: 0;
+min-height: 18em;
+border: 1px solid #aaa;
+background: white;
+}
+
+[role="option"] {
+position: relative;
+display: block;
+padding: 0 1em 0 1.5em;
+line-height: 1.8em;
+}
+
+[role="option"].focused {
+background: #bde4ff;
+}
+
+[role="option"][aria-selected="true"]::before {
+position: absolute;
+left: 0.5em;
+content: "✓";
+}
+
+.hidden {
+display: none;
+}
+.btn{margin-top: 15px;}
+
+.table_parent_div{
+  border: 1px solid #222D65;
+  padding: 15px;
+}
+
+.table_description_header{
+  margin-top: 15px;
+  color: #222D65;
+  text-decoration: underline;
+  font-size: 1.4em;
+}
+
+.table_body_div,.table_header_div{
+  color: #fff;
+  background: #222D65;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.col-xs-3{
+  border: 1px solid #fff;
+}
+
+/*style for menu*/
+ul[role="menubar"] {
+margin: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+padding: 10px;
+font-size: 110%;
+list-style: none;
+background-color: #222D65;
+}
+
+ul[role="menubar"] [role="menuitem"],
+ul[role="menubar"] [role="separator"] {
+padding: 0.25em;
+background-color: #222D65;
+border: 2px solid #222D65;
+}
+
+ul[role="menubar"] [role="menuitem"]:focus,
+ul[role="menubar"] [role="menuitem"]:hover,
+ul[role="menubar"] [role="separator"]:focus,
+ul[role="menubar"] [role="separator"]:hover {
+background-color: #2997D8;
+color: #fff;
+}
+
+ul[role="menubar"] a[role="menuitem"] {
+text-decoration: none;
+color: #fff;
+}
+
+ul[role="menubar"] li {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+ul[role="menubar"] > li {
+display: inline;
+position: relative;
+}
+
+ul[role="menubar"] > li > a::after {
+
+padding-left: 0.25em;
+}
+
+ul[role="menubar"] ul[role="menu"] {
+display: none;
+position: absolute;
+top: -2px;
+left: 0;
+margin: 0;
+padding: 0;
+}
+
+ul[role="menubar"] ul[role="menu"] li a {
+display: block;
+width: 10em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul[role="menubar"] ul[role="menu"] a[aria-haspopup="true"]::after {
+
+padding-right: 2em;
+}
+
+/*style for drag and drop starts here*/
+/* draggable targets */
+[data-draggable="target"],ol
+{
+float:left;
+list-style-type:none;
+
+width:100%;
+height:7.5em;
+overflow-y:auto;
+
+margin:0em 2em 0.5em 0;
+padding:0.5em;
+
+border:2px solid #222D65;
+border-radius:0.2em;
+
+background:#222D65;
+color:#fff;
+}
+
+/* drop target state */
+[data-draggable="target"][aria-dropeffect="move"]
+{
+border-color:#222D65;
+
+background:#222D65;
+}
+
+/* drop target focus and dragover state */
+[data-draggable="target"][aria-dropeffect="move"]:focus,
+[data-draggable="target"][aria-dropeffect="move"].dragover
+{
+outline:none;
+
+box-shadow:0 0 0 1px #fff, 0 0 0 3px #68b;
+}
+
+/* draggable items */
+[data-draggable="item"]
+{
+display:block;
+list-style-type:none;
+
+margin:0 0 2px 0;
+padding:0.2em 0.4em;
+
+border-radius:0.2em;
+
+line-height:1.3;
+}
+
+/* items focus state */
+[data-draggable="item"]:focus
+{
+outline:none;
+
+box-shadow:0 0 0 2px #68b, inset 0 0 0 1px #ddd;
+}
+
+/* items grabbed state */
+[data-draggable="item"][aria-grabbed="true"]
+{
+background:#2997D8;
+color:#fff;
+}

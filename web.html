@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/fontawesome.min.css" integrity="sha512-shT5e46zNSD6lt4dlJHb+7LoUko9QZXTGlmWWx0qjI9UhQrElRb+Q5DM7SVte9G9ZNmovz2qIaV7IWv0xQkBkw==" crossorigin="anonymous" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="./index.css" />
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <header>
+                    <h1>web accessibilty</h1>
+                </header>
+            </div>
+            <div class="col-xs-8 form-group">
+                <section>
+                    <form>
+                        <div class="form-group">
+                            <label for="txtFname"
+                                aria-label="please enter your first name, this is a required field.">First
+                                name:*</label>
+                            <input class="form-control" required id="txtFname" type="text" />
+                            <br />
+                            <label for="txtLname"
+                                aria-label="please enter your last name, this is a required field.">Last
+                                name:*</label>
+                            <input class="form-control" required id="txtLname" type="text" />
+                            <br />
+                            <label for="txtEmail"
+                                aria-label="please enter your Email , this is a required field.">Email
+                                </label>
+                            <input class="form-control" required id="txtEmail" type="email" />
+                            <br />
+                            <label for="txtContact"
+                                aria-label="please enter your Contact , this is a required field.">Contact
+                                </label>
+                            <input class="form-control" required id="txtContact" type="number" />
+                        </div>
+
+                        <div class="form-group">
+                            <label id="lblDOB" aria-label="please enter your Date of birth." for="txtDOB">D.O.B </label>
+                            <input class="form-control" type="text" id="txtDOB" aria-labelledby="lblDOB spanTxtDOB" />
+                            <span id="spanTxtDOB">MM/DD/YYYY</span>
+                        </div>
+                        <div role="radiogroup" aria-labelledby="lblGendersection">
+                            <label id="lblGendersection">Select your Gender</label>
+                            <br />
+                            <input type="radio" name="genderRadioButton" id="radioMale" />
+                            <label for="radioMale">Male</label>
+                            <input type="radio" name="genderRadioButton" id="radioFemale" />
+                            <label for="radioFemale">Female</label>
+
+                        </div>
+                        <div>
+                            <h3 id="lblHeader">Your Skills</h3>
+                            <div role="group" aria-labelledby="lblHeader">
+                                <input type="checkbox" id="chkBrand" name="brand1" value="React" >
+                                <label for="chkBrand">React</label>
+
+                            </div>
+                            <div role="group" aria-labelledby="lblHeader">
+                                <input type="checkbox" id="chkBrand1" name="brand1" value="Angular" >
+                                <label for="chkBrand1">Angular</label>
+
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-xs-12 text-right">
+                                <button id="btnSave" class="btn btn-primary btn-success form-control"
+                                    aria-label="save your prefrences">Save</button>
+                            </div>
+                        </div>
+
+
+                    </form>
+                </section>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
